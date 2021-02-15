@@ -1,0 +1,129 @@
+/*------------------------Default------------------------*/
+
+body{
+	color:#FFFFFF;
+    margin: 0;
+}
+
+h1{
+	align-items: center;
+	text-align: center;
+	color:#0C5478;
+	font-family: sans-serif;
+	width:inherit;
+	height:100px;
+	background-color: #F5F5F5;
+}
+
+header{
+	text-decoration: none;
+    display: block;
+}
+
+/*------------------------Classes------------------------*/
+
+.container{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 4%;
+    padding-top: 4%;
+}
+
+.zone{
+	padding: 27px;
+	margin: 2px;
+	width: 80%;
+	text-align: left;
+	font-family:sans-serif;
+	font-style: normal;
+	text-decoration: none;
+}
+
+.zone:hover {
+  	cursor:pointer;
+}
+
+.red{
+	background: #772432;
+	border:3px solid black;
+	color:#F5F5F5;
+}
+
+.white{
+	background: #F5F5F5;
+	border:3px solid black;
+	color;
+}
+
+.first{
+    padding: 5px;
+	margin: 2px;
+	width: 120px;
+}
+
+.second{
+    font:Medium 30px sans-serif;
+    color: black;
+    padding: 5px;
+}
+
+.third{
+    padding: 5px;
+    width: 984px;
+    height: 400px;
+    box-shadow: 20px 20px 20px #00000029;
+    border: 10px solid #F5F5F5;
+}
+.alert-error {
+	padding: 8px;
+	background-color: red;
+	color: white;
+  }
+
+/*------------------------IDs------------------------*/
+
+#login{
+    top: 744px;
+    left: 758px;
+    width: 120px;
+    height: 40px;
+    background: #772432;
+    text-align: center;
+    font: sans-serif;
+    color: #FFFFFF;
+    font-size: 30px;
+}
+
+#gb{
+    padding: 2px;
+	float: left;
+	text-align: center;
+	font: Medium 30px sans-serif;
+	text-decoration: none;
+	color: white;
+    background-color: #0C5478;
+}
+
+#lo{
+    padding: 2px;
+	float:right;
+	text-decoration: none;
+	text-align: center;
+	font: Medium 30px sans-serif;
+	color: white;
+    background-color: #0C5478;
+}
+
+#pathway{
+    font:Medium 30px sans-serif;
+    color: black;
+}
+
+#choice{
+    font:Medium 30px sans-serif;
+    color: black;
+}

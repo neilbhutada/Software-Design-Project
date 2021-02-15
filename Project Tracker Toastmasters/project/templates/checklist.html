@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Checklist</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+    <meta charset="UTF-8">
+</head>    
+    
+<body>
+    <header>
+		<a  class="first" id="gb" href="{{ url_for('main.index') }}">Go Back</a>
+	</header>
+    
+    <div class="second">
+        <h1>Your Checklist</h1>   
+    </div>
+    <form action="{{url_for('main.checklistsubmit')}}" method="POST">
+    <div>
+        <div class="second">Enter Pathway</div>
+        <div class="second" data-validate="Enter Pathway">
+            <input type="radio" name="pathway1" id="1" value="Presentation Mastery">
+            <label for="1">Presentation Mastery</label>
+            <input class="input100" type="radio" name="pathway1" id="2" value="Innovative Planning">
+            <label for="2">Innovative Planning</label>
+            <input class="input100" type="radio" name="pathway1" id="3" value="Dynamic Leadership">
+            <label for="3">Dynamic Leadership</label>
+            <input class="input100" type="radio" name="pathway1" id="4" value="Effective Coaching">
+            <label for="4">Effective Coaching</label>
+            <input class="input100" type="radio" name="pathway1" id="5" value="Engaging Humour">
+            <label for="5">Engaging Humour</label>
+            <input class="input100" type="radio" name="pathway1" id="6" value="Leadership Development">
+            <label for="6">Leadership Development</label>  
+            <input class="input100" type="radio" name="pathway1" id="7" value="Motivational Strategies">
+            <label for="7">Motivational Strategies</label>  
+            <input class="input100" type="radio" name="pathway1" id="8" value="Persuasive Influence">
+            <label for="8">Persuasive Influence</label>  
+            <input class="input100" type="radio" name="pathway1" id="9" value="Strategic Relations">
+            <label for="9">Strategic Relations</label>  
+            <input class="input100" type="radio" name="pathway1" id="10" value="Team Collaboration">
+            <label for="10">Team Collaboration</label>
+            <input class="input100" type="radio" name="pathway1" id="11" value="Visionary Communication">
+            <label for="11">Visionary Communication</label>  
+            <span class="focus-input100"></span>
+            </div>
+            </div>
+            <div class="second">Enter Level</div>
+            <div class="second" data-validate="Enter Level">
+                <input class="input100" type="radio" name="level_type" id="1" value="1">
+                <label for="1">1</label>
+                <input class="input100" type="radio" name="level_type" id="2" value="2">
+                <label for="2">2</label>
+                <input class="input100" type="radio" name="level_type" id="3" value="3">
+                <label for="3">3</label>
+                <input class="input100" type="radio" name="level_type" id="4" value="4">
+                <label for="4">4</label>
+                <input class="input100" type="radio" name="level_type" id="5" value="5">
+                <label for="5">5</label>            
+                <span class="focus-input100"></span>
+            </div>
+        <div>
+            <div class="second">Enter Project</div>
+            <div class="second" data-validate="Enter Project">
+                <input class="input100" type="radio" name="project" id="1" value="1">
+                <label for="1">Project 1</label>
+                <input class="input100" type="radio" name="project" id="2" value="2">
+                <label for="2">Project 2</label>
+                <input class="input100" type="radio" name="project" id="3" value="3">
+                <label for="3">Project 3</label>           
+                <span class="focus-input100"></span>
+            </div>
+        <div>
+
+                <input type="Submit" name="Submit" value="Submit">
+        <br><br><br><hr>
+    </div>
+    </form>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" /> -->
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div class="alert-error">
+        {{ messages[0] }}
+    </div>
+    {% endif %}
+    {% endwith %}
+<!-- <form method="POST" action="/login"> -->
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

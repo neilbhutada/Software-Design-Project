@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    <meta charset="UTF-8">
+</head>
+    
+<body>
+    <div class="second">
+		<h1>MAHE Toastmasters Tracker</h1>
+    </div>
+	{% with messages = get_flashed_messages() %}
+	{% if messages %}
+		<div class="alert-error">
+			{{ messages[0] }}
+		</div>
+	{% endif %}
+	{% endwith %}
+	<center>
+        <div class="third" id="pathway">
+		<form align="center" method="POST" action="{{url_for('auth.loginuser')}}">
+  			<label for="user">Username:</label>
+  			<input type="text" id="user" name="user">
+  			<br>
+            <br>
+  			<label for="lname">Password:</label>
+  			<input type="password" id="password" name="password">
+  			<br>
+			<br>
+			<div class="field">
+                <label class="checkbox">
+                    <input type="checkbox">
+                    Remember me
+                </label>
+            </div>
+            <br>
+  			<input type="Submit" id="login" name="Submit" value="Login">
+		</form>
+	</div>
+    </center>
+
+</body>
+</html>
